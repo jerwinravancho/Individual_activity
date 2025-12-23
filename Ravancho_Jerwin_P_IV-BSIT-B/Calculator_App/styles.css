@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Center the calculator */
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Calculator container */
+#calculator{
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 360px;
+    padding: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* Display */
+#display{
+    width: 100%;
+    padding: 25px 20px;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    text-align: right;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    background: rgba(30, 41, 59, 0.9);
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Button grid */
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Buttons */
+button{
+    height: 65px;
+    border-radius: 16px; /* ⬅ square-rounded instead of circle */
+    border: none;
+    background: rgba(255,255,255,0.6);
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: all 0.2s ease;
+}
+
+/* Hover & active */
+button:hover{
+    background: rgba(255,255,255,0.85);
+    transform: translateY(-2px);
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+/* Operator buttons */
+.operator-btn{
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.operator-btn:hover{
+    background: linear-gradient(135deg, #7c7ff9, #a78bfa);
+}
+
+/* ➕ PLUS button */
+#keys button:nth-child(16){
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+    color: white;
+}
+
+#keys button:nth-child(16):hover{
+    background: linear-gradient(135deg, #34d399, #6ee7b7);
+}
+
+/* Keyboard focus */
+button:focus-visible{
+    outline: 3px solid #6366f1;
+}

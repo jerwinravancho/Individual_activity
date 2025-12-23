@@ -1,0 +1,155 @@
+/* Google Font (add this in your HTML <head>)
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+*/
+
+/* Base */
+body{
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, hsl(230, 60%, 95%), hsl(260, 60%, 96%));
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form */
+.wheatherForm{
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Input */
+.cityInput{
+    padding: 14px 18px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 2px solid rgba(80, 80, 160, 0.3);
+    border-radius: 14px;
+    width: 300px;
+    background: rgba(255,255,255,0.85);
+    transition: all 0.3s ease;
+}
+
+.cityInput:focus{
+    outline: none;
+    border-color: hsl(240, 70%, 55%);
+    box-shadow: 0 8px 20px rgba(90,90,220,0.3);
+    transform: scale(1.03);
+}
+
+/* Button */
+button[type="submit"]{
+    padding: 14px 32px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, hsl(240, 70%, 55%), hsl(260, 65%, 55%));
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(90,90,220,0.4);
+}
+
+button[type="submit"]:active{
+    transform: scale(0.95);
+}
+
+/* Card */
+.card{
+    border-radius: 25px;
+    background: linear-gradient(
+        180deg,
+        rgba(170,190,255,0.9),
+        rgba(220,200,255,0.9)
+    );
+    padding: 45px 55px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+    min-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* Headings & Text */
+.h1{
+    margin: 0 0 25px;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: hsl(240, 40%, 25%);
+}
+
+p{
+    font-size: 1.4rem;
+    margin: 6px 0;
+}
+
+/* City & Temperature */
+.cityDisplay,
+.tempDisplay{
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 700;
+    color: rgba(30,30,80,0.9);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Humidity & Description */
+.humidityDisplay{
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: hsl(240, 25%, 30%);
+}
+
+.descDisplay{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2rem;
+    color: hsl(250, 40%, 35%);
+}
+
+/* Weather Emoji */
+.weatherEmoji{
+    font-size: clamp(5.5rem, 15vw, 8.5rem);
+    margin: 10px 0;
+}
+
+.weatherEmoji.animate{
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{ transform: translateY(0); }
+    50%{ transform: translateY(-20px); }
+}
+
+/* Error Display */
+.errorDisplay{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: hsl(350, 80%, 55%);
+    margin-top: 18px;
+    text-align: center;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake{
+    0%,100%{ transform: translateX(0); }
+    25%{ transform: translateX(-8px); }
+    75%{ transform: translateX(8px); }
+}
